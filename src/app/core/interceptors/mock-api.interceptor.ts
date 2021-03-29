@@ -11,30 +11,35 @@ import { Observable, of } from 'rxjs';
 
 const articles = [
     {
+        id: 0,
         title: 'Article 1',
         author: 'Author Name',
         description:
             'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor necessitatibus quae eaque? Nulla ut rem harum necessitatibus. Quam in natus accusantium corporis error dicta tenetur laboriosam iste quasi harum? Omnis?',
     },
     {
+        id: 1,
         title: 'Article 2',
         author: 'Author Name',
         description:
             'Dolor necessitatibus quae eaque? Nulla ut rem harum necessitatibus. Quam in natus accusantium corporis error dicta tenetur laboriosam iste quasi harum? Omnis?',
     },
     {
+        id: 2,
         title: 'Article 3',
         author: 'Author Name',
         description:
             'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor necessitatibus quae eaque? Nulla ut rem harum necessitatibus. Omnis?',
     },
     {
+        id: 3,
         title: 'Article 4',
         author: 'Author Name',
         description:
             'Amet consectetur adipisicing elit. Dolor necessitatibus quae eaque? Nulla ut rem harum necessitatibus. Quam in natus accusantium corporis error dicta tenetur laboriosam iste quasi harum? Omnis?',
     },
     {
+        id: 4,
         title: 'Article 5',
         author: 'Author Name',
         description:
@@ -91,7 +96,6 @@ export class MockInterceptor implements HttpInterceptor {
 }
 
 export const mockBackendProvider = {
-    // use fake backend in place of Http service for backend-less development
     provide: HTTP_INTERCEPTORS,
     useClass: MockInterceptor,
     multi: true,
