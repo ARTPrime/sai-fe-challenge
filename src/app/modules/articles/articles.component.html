@@ -1,0 +1,21 @@
+<mat-toolbar>
+    <span>{{ user | userFullname }}</span>
+</mat-toolbar>
+<mat-list>
+    <mat-list-item *ngFor="let article of articles">
+        <div class="list-item">
+            <button
+                (click)="onArticleClick(article)"
+                mat-button
+                color="primary"
+            >
+                {{ article.title }}</button
+            ><span>
+                {{ article.author }}
+            </span>
+        </div>
+    </mat-list-item>
+</mat-list>
+<mat-card *ngIf="selectedArticle">
+    {{ selectedArticle.description }}
+</mat-card>

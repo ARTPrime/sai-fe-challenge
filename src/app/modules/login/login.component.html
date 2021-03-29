@@ -1,0 +1,21 @@
+<mat-card class="login-form">
+    <form [formGroup]="form">
+        <mat-form-field>
+            <mat-label>Username</mat-label>
+            <input matInput type="text" formControlName="username" />
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Password</mat-label>
+            <input matInput type="password" formControlName="password" />
+        </mat-form-field>
+        <button
+            [disabled]="form.invalid"
+            type="button"
+            mat-raised-button
+            color="primary"
+            (click)="onLoginClick()"
+        >
+            Log in
+        </button>
+    </form>
+</mat-card>
